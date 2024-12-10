@@ -24,7 +24,7 @@ public class Student { // pojo class
     @Column(name = "std_name", unique = false, nullable = false, length = 50) // default : varchar(255)
     private String name;
 
-    @Column(name = "std_surname", unique = false, nullable = false, length = 30)
+    @Column(name = "std_surname", unique = true, nullable = false, length = 30)
     private String surname;
 
     private int grade; // null olması durumu kontrol edilmiyor = 0  gr
