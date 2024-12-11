@@ -57,11 +57,10 @@ public class RunnerFetch01 {
         // SQL
         System.out.println("--------------- SQL ---------------");
 
-        String sql02 = "select * from t_student";
-        List<Object[]> resultList01 = session.createSQLQuery(sql02).getResultList();
-        for (Object[] b : resultList01
-        ) {
-            System.out.println(Arrays.toString(b));
+        String sql02 = "select std_name from t_student";
+        List<String> studentName = session.createSQLQuery(sql02).getResultList();
+        for (String name : studentName) {
+            System.out.println("Name = " + name);
         }
 
         //HQL ile grade degeri 98 olan ogrencilerin id ve name bilgilerini getirelim
@@ -78,6 +77,8 @@ public class RunnerFetch01 {
 
         // practice:HQL ile
         // 1-ismi Ali Can olan öğrencileri getirelim
+
+
         // 2-tüm öğrencilerin sadece isimlerini getirelim
         // SQL ile
         // 1-tüm öğrencilerin sadece isimlerini getirelim
