@@ -20,7 +20,7 @@ public class Student05 {
     @JoinColumn(name = "university_id")
     private University university;
 
-    @PrePersist
+    @PrePersist // database'e kaydedilirken bu methodun calısmasını saglıyordu
     public void prePersist() {
         createOn = LocalDateTime.now();
     }

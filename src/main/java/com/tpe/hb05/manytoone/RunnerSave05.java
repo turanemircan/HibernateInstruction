@@ -12,7 +12,7 @@ public class RunnerSave05 {
         Student05 student02 = new Student05(1002, "Ali Can", 78);
         Student05 student03 = new Student05(1003, "Ayşe Yılmaz", 25);
 
-        University university01 = new University(59, "Tekirdağ namık Kemal Universty");
+        University university01 = new University(59, "Tekirdağ Namık Kemal Universty");
         University university02 = new University(60, "Techpro Education Universty");
 
         student01.setUniversity(university01);
