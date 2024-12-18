@@ -27,10 +27,15 @@
              none: yukarıdakilerin hiç birisini yapmıyor.
          -->
 
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <property name="show_sql">true</property>
 
         <property name="format_sql">true</property>
+
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory</property>
+
+        <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>
+        
     </session-factory>
 </hibernate-configuration>

@@ -14,6 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hibernate.version>5.6.10.Final</hibernate.version>
         <postgresql.connector.version>42.6.0</postgresql.connector.version>
+        <ehcache.version>3.6.3</ehcache.version>
     </properties>
 
     <dependencies>
@@ -24,12 +25,27 @@
             <version>${hibernate.version}</version>
         </dependency>
 
-
         <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>${postgresql.connector.version}</version>
+        </dependency>
+
+        <!-- BU KISIM EKLENDİ*************************************************************************-->
+        <!-- Cache yapısını kullanabilmek için dışardan eklenti ekledik-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jcache</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <!-- BU KISIM EKLENDİ *************************************************************************-->
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>${ehcache.version}</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 </project>
